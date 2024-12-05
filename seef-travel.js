@@ -438,7 +438,7 @@ function openFullScreenImage(src, text) {
         fullScreenDiv.classList.remove('visible'); // Trigger fade-out
         setTimeout(() => fullScreenDiv.remove(), 300); // Remove element after fade-out
 
-        
+
         document.body.style.overflow = ''; // Re-enable document scrolling
     }
 }
@@ -637,6 +637,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Open full-screen modal on image click
     images.forEach((image) => {
         image.addEventListener("click", () => {
+
+            // Disable document scrolling
+            document.body.style.overflow = 'hidden';
+
             fullscreenImage.src = image.src; // Set the image in the modal
             fullscreenModal.classList.add("active"); // Add the active class for the fade-in effect
         });
@@ -644,6 +648,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Close the modal when clicking anywhere in the full-screen mode
     fullscreenModal.addEventListener("click", () => {
+
+        document.body.style.overflow = ''; // Re-enable document scrolling
+
         fullscreenModal.classList.remove("active"); // Remove the active class for the fade-out effect
     });
 });

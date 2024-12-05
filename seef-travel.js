@@ -629,6 +629,41 @@ mughader_generateComments(mughader_commentsArray);
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".image-row img");
+    const fullscreenModal = document.getElementById("fullscreenModal");
+    const fullscreenImage = document.getElementById("fullscreenImage");
+
+    // Open full-screen modal on image click
+    images.forEach((image) => {
+        image.addEventListener("click", () => {
+            fullscreenImage.src = image.src; // Set the image in the modal
+            fullscreenModal.classList.add("active"); // Add the active class for the fade-in effect
+        });
+    });
+
+    // Close the modal when clicking anywhere in the full-screen mode
+    fullscreenModal.addEventListener("click", () => {
+        fullscreenModal.classList.remove("active"); // Remove the active class for the fade-out effect
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Function to trach the first inserted letter in the inputs with the class name of "mughader_dynamic_direction_input_class" to set their direction value */
 document.querySelectorAll('.mughader_dynamic_direction_input_class').forEach(input => {

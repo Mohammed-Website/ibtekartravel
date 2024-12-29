@@ -700,18 +700,6 @@ header.hidden {
   background: #ff3333;
 }
 
-/* Title */
-.full_screen_title {
-  font-size: 22px;
-  margin: 0;
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-
 
 .full_screen_title {
   font-size: 2rem;
@@ -1516,6 +1504,7 @@ footer * {
 
   /* Title */
   .full_screen_title {
+    font-size: 5vw;
     margin-bottom: 0;
   }
 

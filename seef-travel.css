@@ -18,7 +18,6 @@ body {
   background: white;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -748,7 +747,7 @@ header.hidden {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 12px 24px;
+  padding: 1vmin 2vmin;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   transition: 0.3s ease;
@@ -761,113 +760,6 @@ header.hidden {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Container styling */
-.image-row-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 20px 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 3px;
-  scrollbar-width: thin;
-}
-
-.image-row {
-  display: flex;
-  gap: 15px;
-}
-
-/* Image styling */
-.image-row img {
-  width: 20rem;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-}
-
-.image-row img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Scrollbar styling */
-.image-row-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.image-row-container::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
-}
-
-.image-row-container::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-.image-row-container::-webkit-scrollbar-track {
-  background: #f4f4f9;
-}
-
-/* Fullscreen Modal */
-.fullscreen-modal {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-
-  /* Hidden by default */
-  opacity: 0;
-  visibility: hidden;
-
-  /* Animation */
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-}
-
-.fullscreen-modal img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 8px;
-}
-
-/* Visible state for modal */
-.fullscreen-modal.active {
-  opacity: 1;
-  visibility: visible;
-}
 
 
 
@@ -1237,18 +1129,6 @@ footer * {
 
 
 
-
-
-
-  /* Image styling */
-  .image-row img {
-    width: 35vw;
-  }
-
-
-
-
-
   /* WhatsApp Code */
   .whatsapp_icon_div {
     font-size: 2.8vw;
@@ -1357,7 +1237,7 @@ footer * {
   .full_screen_container {
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 0;
     gap: 15px;
   }
 
@@ -1370,12 +1250,19 @@ footer * {
   }
 
   .full_screen_image {
-    max-width: 90%;
+    max-width: 95vw;
     max-height: 50vh;
   }
 
   .exit_button {
+    width: fit-content;
+    padding: 2px 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
+  }
+
+  .whatsapp_button {
+    width: auto;
   }
 
 
@@ -1527,17 +1414,6 @@ footer * {
   .email_subscription_form input {
     font-size: 4.5vw;
     padding: 2px 3px;
-  }
-
-
-
-
-
-
-
-  /* Image styling */
-  .image-row img {
-    width: 45vw;
   }
 
 
